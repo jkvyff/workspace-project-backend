@@ -1,3 +1,3 @@
 class DocumentSerializer < ActiveModel::Serializer
-  attributes :extension, :content
+  attributes :id, :extension, :content, :created_at
 end

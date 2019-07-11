@@ -3,8 +3,14 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :users, only: [:create]
+      resources :documents, only: [:index, :show, :create]
       post '/login', to: 'auth#create'
       get '/profile', to: 'users#profile'
+      get '/documents', to: 'documents#index'
+      get '/documents/:id', to: 'documents#show'
+      post '/documents/new', to: 'documents#create'
+
+      mount ActionCable.server => '/cable'
     end
   end
 end
