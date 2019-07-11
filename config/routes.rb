@@ -2,15 +2,12 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   namespace :api do
     namespace :v1 do
-      resources :users
-      resources :documents
-      post '/new', to: 'users#create'
+      resources :users, only: [:create]
+      resources :documents, only: [:index, :show]
       post '/login', to: 'auth#create'
       get '/profile', to: 'users#profile'
       get '/documents', to: 'documents#index'
       get '/documents/:id', to: 'documents#show'
-      post '/documents/new', to: 'documents#create'
-
       mount ActionCable.server => '/cable'
     end
   end
