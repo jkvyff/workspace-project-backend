@@ -8,6 +8,8 @@ Rails.application.routes.draw do
       get '/profile', to: 'users#profile'
       get '/documents', to: 'documents#index'
       get '/documents/:id', to: 'documents#show'
+      post '/documents/new', to: 'documents#create'
+      
       mount ActionCable.server => '/cable'
     end
   end
