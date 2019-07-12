@@ -1,6 +1,6 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-
+  config.action_cable.url = "ws://fierce-depths-78222.herokuapp.com/api/v1/cable"
   config.action_cable.allowed_request_origins = [/http:\/\/*/, /https:\/\/*/]
 
   # In the development environment your application's code is reloaded on
