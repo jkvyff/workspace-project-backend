@@ -10,3 +10,6 @@ u1 = User.create(username: 'Admin', password: 'Milan', avatar: 'https://upload.w
 # Documents
 d1 = Document.create(extension: 'abc', content: 'Big dreams, big seams')
 d2 = Document.create(extension: 'ymble', content: 'Lets work togeather')
+d3 = Document.create(extension: 'cats', content: 'meow meow meow')
+d4 = Document.create(extension: 'dogs', content: 'woof woof')
+d5 = Document.create(extension: 'work', content: 'Nothing happening here')
