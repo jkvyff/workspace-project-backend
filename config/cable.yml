@@ -6,5 +6,5 @@ test:
 
 production:
   adapter: redis
-  url: <%= ENV.fetch("REDIS_URL") { "redis://redistogo:72a2402bf3184200a278d2d2120416db@hammerjaw.redistogo.com:9385/" } %>
+  url: <%= ENV.fetch("REDIS_URL") { "redis://redistogo:811c284184aa9fc5d1febb5197934e3d@dory.redistogo.com:10280/" } %>
   channel_prefix: Rails-Auth-backend_production
